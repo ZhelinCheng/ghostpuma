@@ -24,7 +24,6 @@
     {{ghost_head}}
     <title>{{meta_title}}{{#is "post"}} - {{@blog.title}}{{/is}}</title>
     <link rel="stylesheet" type="text/css" href="{{asset "css/base.css"}}">
-
 </head>
 
 <body>
@@ -61,13 +60,9 @@
     <main class="main-content container">
         {{{body}}}
     </main>
-
     <footer class="site-footer u-textAlignCenter container">
-        <a href="{{@blog.url}}" target="_blank">zhelin.me</a> {{date format="YYYY"}}
-         engine by <a href="//ghost.org" class="iconfont icon-aixin">ghost</a>
-        <p>
-            <a href="http://www.miitbeian.gov.cn">蜀ICP备16004713号-1</a>
-        </p>
+        <a href="{{@blog.url}}" target="_blank">zhelin.me</a> {{date format="YYYY"}} <a href="" class="iconfont icon-aixin"></a> engine by <a href="//ghost.org" target="_blank" rel="nofollow">ghost</a>
+        <p><a href="http://www.miitbeian.gov.cn" rel="nofollow">蜀ICP备16004713号-1</a></p>
     </footer>
 </div>
 <div id="j-btn-up" class="back-to-top u-hide iconfont icon-up2"></div>
@@ -79,5 +74,4 @@
 <script type="text/javascript" src="{{asset "js/page/main.js"}}"></script>
 {{ghost_foot}}
 </body>
-
 </html>
