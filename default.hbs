@@ -32,7 +32,7 @@
     <header class="site-header u-textAlignCenter container{{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{/if}}">
         <div class="header-inner">
             <h1 class="site-title">
-                <a href="http://zhelin.me" title="折口木木">折口木木</a>
+                <a href="http://zhelin.me" title="{{@blog.title}}">折口木木</a>
             </h1>
             <p class="site-description">我认真的样子像天桥下贴膜的小哥</p>
             <div class="social-links">
@@ -63,8 +63,8 @@
     </main>
 
     <footer class="site-footer u-textAlignCenter container">
-        <a href="http://zhelin.me" target="_blank">ZHELIN.ME 2017</a>
-        <a href="" class="iconfont icon-aixin"></a> engine by ghost
+        <a href="{{@blog.url}}" target="_blank">zhelin.me</a> {{date format="YYYY"}}
+         engine by <a href="//ghost.org" class="iconfont icon-aixin">ghost</a>
         <p>
             <a href="http://www.miitbeian.gov.cn">蜀ICP备16004713号-1</a>
         </p>
