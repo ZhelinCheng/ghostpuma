@@ -14,7 +14,40 @@
     <title>Document</title>
 </head>
 <body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header-info">
+            <h1 class="header-title">Puma</h1>
+            <p class="header-desc">Just a ghost theme.</p>
+            <form class="header-search" action="/" method="get">
+                <input class="header-search__input ui-ant" placeholder="输入内容按回车搜索" name="q" value="" type="search">
+            </form>
+        </div>
+    </header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-list__item current-menu-item">
+                <a href="">首页</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="">音乐</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="">工具</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="">占位图</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
 
+    </main>
+    <footer class="footer">
+        <p><a href="">ZHELIN.ME</a> 2019 · ENGINE BY GHOST</p>
+        <p>蜀ICP备16004713号-1</p>
+    </footer>
+</div>
 <%= htmlWebpackPlugin.options.SHIM %>
 </body>
 </html>

@@ -8,7 +8,8 @@
     "globals": {
         "$": true,
         "define": true,
-        "layer": true
+        "layer": true,
+        "_SITE_CONFIG": true
     },
     "parserOptions": {
         "ecmaVersion": 6,

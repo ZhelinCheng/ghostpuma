@@ -27,7 +27,7 @@ html, body {
 }
 
 body {
-    padding-top: 60px;
+    padding: 60px 0;
 }
 
 .wrapper {
@@ -35,11 +35,50 @@ body {
 }
 
 .container {
-    height: 300px;
+    padding: 0 60px;
+    min-height: 300px;
+    
+    .c-header {
+        padding: 30px 0;
+        text-align: center;
+        border-bottom: 1px rgba(0,0,0,.05) solid;
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+.ui-pager {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0;
+    
+    .page-numbers {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0 11px;
+        line-height: 28px;
+        background-color: #fafafa;
+        border: 1px solid rgba(0,0,0,.05);
+        border-radius: 3px;
+        color: rgba(0,0,0,.6);
+        font-size: 12px;
+        text-decoration: none;
+        
+        &.active,
+        &:hover {
+            background-color: #27ae60;
+            color: #fff;
+        }
+    }
 }
 
 @media (max-width: @md-hd-max) {
     body {
-        padding-top: 0;
+        padding: 0;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 }
