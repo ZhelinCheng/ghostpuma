@@ -12,23 +12,10 @@ const alias = require('./alias')
 const resolve = (p) => path.resolve(__dirname, '..', p)
 const webpackMerge = require('webpack-merge')
 
-// 入口目录
-const entryDir = resolve('src/js/page')
-// 输出目录
-const outputDir = resolve('dist')
-// 基础HTML模板
-const templatePath = fs.readFileSync(path.resolve(__dirname, './tpl.html'))
-// 入口文件
-const entryFiles = fs.readdirSync(entryDir)
-
-const isDev = process.env.NODE_ENV === 'development'
-const
-  entry = {},
-  output = {},
-  htmlPlugins = []
 
 // 默认配置
 let config = {
+  outputDir: 'dist',
   css: {
     // 清除冗余CSS
     purify: true
@@ -67,6 +54,21 @@ if (fs.existsSync(resolve('wp.config.js'))) {
 }
 
 exports.wpConfig = config
+
+// 入口目录
+const entryDir = resolve('src/js/page')
+// 输出目录
+const outputDir = resolve(config.outputDir)
+// 基础HTML模板
+const templatePath = fs.readFileSync(path.resolve(__dirname, './tpl.html'))
+// 入口文件
+const entryFiles = fs.readdirSync(entryDir)
+
+const isDev = process.env.NODE_ENV === 'development'
+const
+  entry = {},
+  output = {},
+  htmlPlugins = []
 
 // 设置别名
 function resolveAlias () {

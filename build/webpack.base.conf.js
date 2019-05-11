@@ -83,7 +83,7 @@ if (fs.existsSync(resolve('public'))) {
   config.plugins.push(
     new CopyWebpackPlugin([{
       from: resolve('public'),
-      to: resolve(`dist/${wpConfig.assetsDir}`),
+      to: resolve(`${wpConfig.outputDir}/${wpConfig.assetsDir}`),
       ignore: ['*.html', '.gitkeep'],
       transform (content, path) {
         // 压缩static目录JS文件

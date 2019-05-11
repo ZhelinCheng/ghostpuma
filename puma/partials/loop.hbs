@@ -1,0 +1,21 @@
+{{#foreach posts}}
+    <article class="c-article">
+        <header class="hd">
+            <h2><a href="{{url}}" class="ui-ant">{{title}}</a></h2>
+            <time datetime="{{published_at}}">{{date format="YYYY/MM/DD"}}</time>
+        </header>
+        <div class="bd">
+            {{#if feature_image}}
+                <p class="with-img">
+                    <img src="{{asset "img/loading.svg"}}" data-echo="{{img_url feature_image}}" alt="{{title}}" class="loading" />
+                </p>
+            {{/if}}
+            <p>{{excerpt words="11"}}...</p>
+            <p><a class="more-link" href="{{url}}" rel="nofollow">Read More.</a></p>
+        </div>
+        <div class="bd-footer">
+            By {{primary_author.name}} . In {{tags}}
+            <div>{{reading_time}}</div>
+        </div>
+    </article>
+{{/foreach}}

@@ -1,0 +1,44 @@
+{{> "public_head"}}
+<link href="{{asset "css/music.bundle.css"}}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper {{post_class}}">
+        {{> "header"}}
+        <main class="container">
+            {{#post}}
+            <header class="c-header">
+                <h1>{{title}}</h1>
+            </header>
+            <div id="J-music-box" class="nm-wrapper"></div>
+            {{/post}}
+        </main>
+        {{> "footer"}}
+<!--播放控制台 S-->
+<div id="J-music-panel" class="nmplaybar">
+    <div class="jp-progress">
+        <div id="J-panel-load" class="nmplayer-prosess jp-seek-bar"></div>
+    </div>
+    <div class="nmplayer-wrap nm-container">
+        <div id="J-panel-cover" class="nmplayer-cover"></div>
+        <div class="nmplayer-info">
+            <span id="J-panel-title" class="nmplayer-title"></span>
+            <span id="J-panel-time" class="nmplayer-time"></span>
+            <span id="J-panel-lyric" class="nmplayer-lrc"></span>
+        </div>
+        <div class="nmplayer-control">
+            <span id="J-panel-prev" class="iconfont icon-left"></span>
+            <span id="J-panel-control" class="iconfont icon-stop"></span>
+            <span id="J-panel-next" class="iconfont icon-right"></span>
+        </div>
+    </div>
+    <div class="hide">
+        <audio id="J-panel-audio" preload="metadata"></audio>
+    </div>
+</div>
+<!--播放控制台 E-->
+{{> "public_foot"}}
+<script src="{{asset "js/music.bundle.js"}}" type="text/javascript"></script>
+</body>
+
+</html>

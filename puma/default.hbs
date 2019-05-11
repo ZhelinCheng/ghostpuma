@@ -1,0 +1,17 @@
+{{> "public_head"}}
+</head>
+
+<body>
+    <div class="wrapper {{post_class}}">
+        {{> "header"}}
+        <main class="container">
+            {{{body}}}
+            {{#is "home, paged, tag"}}
+            {{pagination}}
+            {{/is}}
+        </main>
+        {{> "footer"}}
+{{> "public_foot"}}
+</body>
+
+</html>
