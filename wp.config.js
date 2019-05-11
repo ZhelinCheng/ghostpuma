@@ -5,9 +5,12 @@
 
 'use strict'
 module.exports = {
+  css: {
+    purify: false
+  },
   assetsDir: 'assets',
   publicPath: '/',
-  productionSourceMap: true,
+  productionSourceMap: false,
   publicJsMin: false,
-  filenameHashing: true,
+  filenameHashing: false,
 }

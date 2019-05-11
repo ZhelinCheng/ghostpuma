@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ZhelinCheng/ghostpuma#readme",
   "dependencies": {
+    "highlight.js": "^9.15.6",
     "jquery": "^3.4.1"
   },
   "devDependencies": {

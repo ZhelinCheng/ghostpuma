@@ -12,30 +12,7 @@ const {assetsPath} = require('./bundle')
 module.exports = function () {
   let loaders = [
     {
-      test: /\.css$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            sourceMap: true
-          }
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true
-          }
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true
-          }
-        }
-      ]
-    },
-    {
-      test: /\.less$/,
+      test: /\.(le|c)ss$/,
       use: [
         {
           loader: MiniCssExtractPlugin.loader,

@@ -29,34 +29,27 @@ function f () {
     optimization: {
       splitChunks: {
         chunks: 'async',
-        minSize: 20000,
+        minSize: 5000,
         maxSize: 0,
-        minChunks: 1,
+        minChunks: 2,
         maxAsyncRequests: 5,
         maxInitialRequests: 3,
         automaticNameDelimiter: '~',
         name: true,
         cacheGroups: {
-          /*common: {
-            chunks: 'initial',
-            name: 'common',
-            minSize: 1,
-            priority: -10
-          },*/
           vendors: {
             chunks: 'initial',
             // test: /[\\/]node_modules[\\/]/,
-            minChunks: 1,
+            minChunks: 2,
             priority: -10,
             name: 'vendor',
             reuseExistingChunk: true
           },
-          /*base: {
-            name: 'base',
+          /*common: {
+            name: 'common',
             test: /\.(le|c)ss$/,
-            chunks: 'all',
+            chunks: 'initial',
             // enforce: true,
-            minSize: 2000,
             priority: -20,
           },*/
           default: {

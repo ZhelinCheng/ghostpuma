@@ -5,37 +5,11 @@
 
 .container {
     .c-article {
-        padding: 40px 0;
         border-bottom: 2px solid rgba(0, 0, 0, .05);
         line-height: 1.8;
         
         &:last-child {
             border-bottom: none;
-        }
-        
-        .hd {
-            margin-bottom: 20px;
-            text-align: center;
-            
-            a {
-                text-decoration: none;
-                color: inherit;
-                
-                &:hover {
-                    color: #27ae60;
-                }
-            }
-            
-            > h2 {
-                font-size: 24px;
-                font-weight: normal;
-            }
-            
-            > time {
-                font-family: dinmedium;
-                font-size: 14px;
-                color: rgba(0, 0, 0, .44);
-            }
         }
         
         .bd {
@@ -49,6 +23,12 @@
                     margin-right: -60px;
                     line-height: 1.15;
                     font-size: 0;
+                    text-align: center;
+                    background-color: #f9f9f9;
+                    
+                    .loading {
+                        padding: 120px 0;
+                    }
                     
                     img {
                         max-width: 100%;
@@ -81,21 +61,16 @@
 @media (max-width: @md-hd-min) {
     .container {
         .c-article {
-            padding: 15px 0;
-            .hd {
-                margin-bottom: 15px;
-                line-height: 1.4;
-                >h2 {
-                    font-size: 20px;
-                }
-            }
-            
             .bd {
                 p {
                     margin-bottom: 15px;
                     &.with-img {
                         margin-left: -15px;
                         margin-right: -15px;
+    
+                        .loading {
+                            padding: 60px 0;
+                        }
                     }
                 }
             }

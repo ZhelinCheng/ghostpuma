@@ -16,7 +16,11 @@ button, input, textarea {
 }
 
 a, button, input {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    color: #3eb0ef;
 }
 
 html, body {
@@ -41,12 +45,44 @@ body {
     .c-header {
         padding: 30px 0;
         text-align: center;
-        border-bottom: 1px rgba(0,0,0,.05) solid;
+        border-bottom: 1px rgba(0, 0, 0, .05) solid;
+        
         h1 {
             font-size: 20px;
         }
     }
+    
+    .c-article {
+        padding: 40px 0;
+        
+        .hd {
+            margin-bottom: 20px;
+            text-align: center;
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+                
+                &:hover {
+                    color: #27ae60;
+                }
+            }
+            
+            > h2 {
+                font-size: 24px;
+                font-weight: normal;
+            }
+            
+            > time {
+                font-family: dinmedium;
+                font-size: 14px;
+                color: rgba(0, 0, 0, .44);
+            }
+        }
+    }
 }
+
+
 
 .ui-pager {
     padding: 30px 0;
@@ -59,9 +95,9 @@ body {
         padding: 0 11px;
         line-height: 28px;
         background-color: #fafafa;
-        border: 1px solid rgba(0,0,0,.05);
+        border: 1px solid rgba(0, 0, 0, .05);
         border-radius: 3px;
-        color: rgba(0,0,0,.6);
+        color: rgba(0, 0, 0, .6);
         font-size: 12px;
         text-decoration: none;
         
@@ -73,6 +109,40 @@ body {
     }
 }
 
+.ui-pager__2,
+.ui-pager__1 {
+    .page-item__prev {
+        display: none;
+        
+        & + span {
+            display: none;
+        }
+    }
+}
+
+.ui-pager__3 {
+    .page-item__prev {
+        & + span {
+            display: none;
+        }
+    }
+}
+
+.ui-pager__last2 {
+    .page-item__next {
+        display: none;
+    }
+}
+
+.ui-pager__last1 {
+    .page-item__next {
+        display: none;
+        & + a {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: @md-hd-max) {
     body {
         padding: 0;
@@ -80,5 +150,18 @@ body {
     
     .container {
         padding: 0 15px;
+        
+        .c-article {
+            padding: 15px 0;
+            
+            .hd {
+                margin-bottom: 15px;
+                line-height: 1.4;
+                
+                > h2 {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }

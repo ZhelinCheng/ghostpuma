@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header style="background-image: url(/assets/img/banner.jpg)" class="header">
         <div class="header-info">
             <h1 class="header-title">Puma</h1>
             <p class="header-desc">Just a ghost theme.</p>
@@ -52,9 +52,9 @@
                 </header>
                 <div class="bd">
                     <p class="with-img">
-                        <img width="2048" height="1365"
-                             src="https://puma.wpista.com/wp-content/uploads/2018/11/Photo-31-08-15-12-00-39.jpg"
-                             class="attachment-full size-full wp-post-image" alt="">
+                        <img src="/assets/img/loading.svg"
+                             data-echo="https://puma.wpista.com/wp-content/uploads/2018/11/Photo-31-08-15-12-00-39.jpg"
+                             class="attachment-full size-full wp-post-image loading" alt="">
                     </p>
                     <p>打算要寫京都的文準備了很久，卻遲遲寫不好開頭。這不是一個我曾長久居住的城市，但日本這個國家住了有近四年，語言和習慣都很熟悉。京都這座古城去的次數也不只一次。
                         有點熟又不太熟的距離反而變得難以下筆。既不想介紹的太大眾粗淺...</p>
@@ -106,13 +106,15 @@
                 </div>
             </article>
         </section>
-        <div class="ui-pager">
-            <span aria-current="page" class="page-numbers active">1</span>
-            <a class="page-numbers" href="https://puma.wpista.com/page/2">2</a>
-            <a class="page-numbers" href="https://puma.wpista.com/page/3">3</a>
+        <nav class="ui-pager ui-pager__1 ui-pager__2 ui-pager__3 ui-pager__last1 ui-pager__last2" role="navigation">
+            <a class="page-numbers page-item__prev" href="/page/1">1</a>
             <span class="page-numbers dots">…</span>
-            <a class="page-numbers" href="https://puma.wpista.com/page/5">5</a>
-        </div>
+            <a class="page-numbers" href="/page/2/">2</a>
+            <span aria-current="page" class="page-numbers active">3</span>
+            <a class="page-numbers" href="/page/4/">4</a>
+            <span class="page-numbers dots page-item__next">…</span>
+            <a class="page-numbers" href="/page/7/">7</a>
+        </nav>
     </main>
     <footer class="footer">
         <p><a href="">ZHELIN.ME</a> 2019 · ENGINE BY GHOST</p>
