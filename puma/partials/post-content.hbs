@@ -39,12 +39,14 @@
         </div>
     </nav>
     <div class="post-author">
+        {{#primary_author}}
         {{#if profile_image}}
-            <img src="{{profile_image}}" alt="{{name}}" class="post-author__head"/>
+            <img src="{{img_url profile_image}}" alt="{{name}}" class="post-author__head"/>
         {{/if}}
         <h3 class="post-author__name"><a href="{{url}}" title="{{name}}的所有文章">{{name}}</a></h3>
         <div class="post-author__desc"><p>{{bio}}</p>
         </div>
+        {{/primary_author}}
     </div>
     <div class="post-comment" id="SOHUCS" sid="{{comment_id}}" ></div>
 </article>
