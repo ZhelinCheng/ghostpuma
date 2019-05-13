@@ -1,5 +1,19 @@
 # ghostpuma
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
+## 起步
+
+开发：
+```
+npm run dev
+```
+
+构建：
+```
+npm run build
+```
+
 ## 主题说明
 
 Ghost主题ghostpuma，设计来自wordpress主题[Puma](https://github.com/bigfa/Puma)。
@@ -11,7 +25,5 @@ Ghost主题ghostpuma，设计来自wordpress主题[Puma](https://github.com/bigf
 ## 版本说明
 
 ------------------------------
-Ghostpuma Version 1.0.0
+Ghostpuma Version 2.0.0
 ------------------------------
-
-- 完成基本功能

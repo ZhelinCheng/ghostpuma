@@ -1,0 +1,16 @@
+{{#block "sprites"}}
+{{#block "spritesheet"}}
+.ui-icon{
+  background: url('{{{spritesheet.escaped_image}}}') no-repeat;
+  display:inline-block;
+  vertical-align: middle;
+};
+{{/block}}
+{{#each sprites}}
+.ui-{{{ nameHandle strings.name }}} {
+  background-position: {{ zeroHandle offset_x }} {{ zeroHandle offset_y }};
+  width: {{ zeroHandle width }};
+  height: {{ zeroHandle height }}
+};
+{{/each}}
+{{/block}}

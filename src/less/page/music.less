@@ -1,0 +1,286 @@
+/**
+ * Created by ChengZheLin on 2019/5/10.
+ */
+@import "../_commons/_variables";
+@import "../_mixins";
+
+@color0: #ee4d50;
+@width0: 1000px;
+
+.container {
+    padding: 0;
+    .c-header {
+        border-bottom: none;
+    }
+}
+
+.nm-wrapper {
+    padding-bottom: 40px;
+    line-height: 1.8;
+}
+.nm-container {
+    margin: 0 auto;
+    max-width: @width0;
+}
+
+.nm-container {
+    width: 94%;
+}
+
+.nm-album-list {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    .nm-list-item {
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 10px;
+        width: 25%;
+        .music-info {
+            color: #333333;
+            display: block;
+            font-size: 12px;
+            line-height: 1.5;
+            overflow: hidden;
+            padding: 3px 0;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .nm-list-content {
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,.05);
+            overflow: hidden;
+            img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    .nm-list-item.is-active {
+        position: relative;
+        
+        .music-info {
+            background-color: @color0;
+            color: #ffffff;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -40px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #f0f0f0;
+        }
+        
+    }
+}
+.nm-songs {
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+.nm-songs-title {
+    border-bottom: 1px solid #dddddd;
+    margin: 0 auto 15px;
+    max-width: @width0;
+    padding-bottom: 5px;
+}
+.nm-songs-list {
+    margin: 0 auto;
+    max-width: @width0;
+    position: relative;
+}
+.album--nice-list {
+    margin: 0 auto;
+    max-width: @width0;
+}
+
+.nmplaybar {
+    background-color: hsla(0,0%,100%,.95);
+    bottom: 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    color: rgba(0,0,0,.6);
+    left: 0;
+    position: fixed;
+    right: 0;
+    transform: translateY(100%);
+    transition: .5s;
+    z-index: 1;
+    
+    .hide {
+        display: none;
+    }
+}
+.nmplaybar.appear {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.nmplayer-wrap {
+    overflow: hidden;
+}
+.nmplayer-prosess {
+    width: 0;
+    height: 3px;
+    background-color: @color0;
+    cursor: pointer;
+    transition: all .96s linear
+}
+.nmplayer-cover {
+    background-color: #eeeeee;
+    background-size: cover;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05);
+    float: left;
+    height: 48px;
+    margin: 5px 5px 0 0;
+    width: 48px;
+}
+.nmplayer-control {
+    float: right;
+    font-size: 13px;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        padding-left: 20px;
+        text-decoration: none;
+        &:hover {
+            color: rgba(0,0,0,.8);
+        }
+    }
+}
+.nmplayer-info {
+    float: left;
+    font-size: 13px;
+    height: 60px;
+    line-height: 60px;
+}
+.nmplayer-time {
+    margin-right: 5px;
+}
+.nmplayer-title {
+    margin-right: 5px;
+}
+.nm-copyright {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: @width0;
+    padding: 5px 10px;
+    text-align: right;
+    i {
+        font-size: 14px;
+    }
+}
+.nm-loadmore {
+    border-radius: 3px;
+    border: 2px solid @color0;
+    color: @color0;
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 13px;
+    &:hover {
+        background-color: @color0;
+        color: #ffffff;
+    }
+}
+.nm-page-header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.nm-page-title {
+    font-size: 24px;
+}
+
+.nm-songlist {
+    counter-reset: a;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.nm-songlist-item {
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all .5s;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    list-style: none;
+    margin: 0!important;
+    overflow: hidden;
+    padding: 2px 30px;
+    position: relative;
+    transition: all .5s;
+    vertical-align: top;
+    width: 50%;
+    &:before {
+        content: counter(a,decimal) ". ";
+        counter-increment: a;
+        left: 0;
+        position: absolute;
+    }
+    .song-time {
+        position: absolute;
+        right: 20px;
+        top: 2px;
+    }
+    .song-info {
+        display: block;
+        overflow: hidden;
+        padding-right: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &:hover {
+        color: @color0;
+    }
+}
+.nm-songlist-item.current {
+    color: @color0;
+}
+.nm-songlist.threerow {
+    .nm-songlist-item {
+        width: 33.3%;
+    }
+}
+.music-page-navi {
+    padding: 20px 0;
+    text-align: center;
+}
+.nm-error {
+    padding: 50px 0;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .nm-songlist-item {
+        float:none;
+        width: auto
+    }
+    
+    .nm-songlist.threerow .nm-songlist-item {
+        width: auto
+    }
+    
+    .nm-container {
+        width: 90%
+    }
+    
+    .nm-album-list .nm-list-item {
+        padding: 3px
+    }
+    
+    .nmplayer-info {
+        display: none
+    }
+}

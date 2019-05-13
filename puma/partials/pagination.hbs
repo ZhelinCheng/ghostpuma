@@ -1,0 +1,33 @@
+<nav id="J-pager" class="ui-pager ui-pager__{{page}}" role="navigation">
+    {{!-- <span aria-current="page" class="page-numbers active">1</span>
+    <a class="page-numbers" href="https://puma.wpista.com/page/2">2</a>
+    <a class="page-numbers" href="https://puma.wpista.com/page/3">3</a>
+    <span class="page-numbers dots">…</span>
+    <a class="page-numbers" href="https://puma.wpista.com/page/5">5</a> --}}
+    <script>
+        (function(){
+            var $pager = document.getElementById('J-pager')
+            var pages = {{pages}}
+            var page = {{page}}
+            var diff = pages - page
+            var className = 'ui-pager__last' + diff
+            if (diff <= 2) {
+                if ($pager.classList)
+                    $pager.classList.add(className);
+                else
+                    $pager.className += ' ' + className;
+            }
+        }())
+    </script>
+    {{#if prev}}
+        <a class="page-numbers page-item__prev" href="/page/1/">1</a>
+        <span class="page-numbers dots">…</span>
+       <a class="page-numbers" href="{{page_url prev}}">{{prev}}</a>
+    {{/if}}
+    <span aria-current="page" class="page-numbers active">{{page}}</span>
+    {{#if next}}
+        <a class="page-numbers" href="{{page_url next}}">{{next}}</a>
+        <span class="page-numbers dots page-item__next">…</span>
+        <a class="page-numbers" href="{{page_url pages}}">{{pages}}</a>
+    {{/if}}
+</nav>

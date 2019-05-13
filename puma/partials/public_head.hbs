@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{@site.lang}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content=always name=referrer> 
+    <link href="{{asset "css/vendor.bundle.css"}}" rel="stylesheet">
+    {{#is "home, paged, tag, author"}}
+    <link href="{{asset "css/index.bundle.css"}}" rel="stylesheet">
+    <meta name="description" content="{{@site.description}}" />
+    <meta itemprop="name" content="{{@site.title}} - {{@site.description}}" />
+    <meta itemprop="image" content="{{@site.logo}}" />
+    <meta name="description" itemprop="description" content="{{@site.description}}" />
+    <title>{{@site.title}} - {{@site.description}}</title>
+    {{/is}}
+
+    {{#is "post"}}
+    {{#post}}
+    <link href="{{asset "css/posts.bundle.css"}}" rel="stylesheet">
+    <meta name="description" content="{{excerpt}}" />
+    <meta itemprop="name" content="{{title}} - {{@site.title}}" />
+    {{#if feature_image}}
+    <meta itemprop="image" content="{{img_url feature_image}}" />
+    {{else}}
+    <meta itemprop="image" content="{{@site.logo}}" />
+    {{/if}}
+    <meta name="description" itemprop="description" content="{{excerpt}}" />
+    <title>{{title}} - {{@site.title}}</title>
+    {{/post}}
+    {{/is}}
+    {{ghost_head}}

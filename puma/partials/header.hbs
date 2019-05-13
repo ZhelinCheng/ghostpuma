@@ -1,0 +1,13 @@
+<header {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})" {{/if}} class="header">
+    <div class="header-info">
+        <h1 class="header-title">{{@site.title}}</h1>
+        <p class="header-desc">{{@site.description}}</p>
+        <form class="header-search" action="https://www.bing.com/search" method="get">
+            <input name="q1" value="site:zhelin.me" type="hidden">
+            <input class="header-search__input ui-ant" placeholder="{{t "Search Keyword"}}" name="q" value="" type="search">
+        </form>
+    </div>
+</header>
+<nav class="nav">
+    {{navigation}}
+</nav>
