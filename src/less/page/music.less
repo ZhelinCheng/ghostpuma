@@ -17,6 +17,13 @@
 .nm-wrapper {
     padding-bottom: 40px;
     line-height: 1.8;
+    .loading {
+        margin: 0 auto;
+        width: 100%;
+        height: 280px;
+        background: url("/assets/img/loading.svg") center no-repeat;
+        background-size: 12%;
+    }
 }
 .nm-container {
     margin: 0 auto;
@@ -282,5 +289,10 @@
     
     .nmplayer-info {
         display: none
+    }
+    .nm-wrapper {
+        .loading {
+            background-size: 24%;
+        }
     }
 }

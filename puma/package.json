@@ -1,40 +1,40 @@
 {
-    "name": "puma",
-    "description": "The personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://zhelin.me",
-    "version": "2.1.0",
-    "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "Zhelin Cheng",
-        "email": "i@zhelin.me",
-        "url": "https://zhelin.me"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ZhelinCheng/ghostpuma.git"
-    },
-    "bugs": "https://github.com/ZhelinCheng/ghostpuma/issues",
-    "config": {
-        "posts_per_page": 5
-    }
+  "name": "puma",
+  "description": "The personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+  "demo": "https://zhelin.me",
+  "version": "2.1.9",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Zhelin Cheng",
+    "email": "i@zhelin.me",
+    "url": "https://zhelin.me"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhelinCheng/ghostpuma.git"
+  },
+  "bugs": "https://github.com/ZhelinCheng/ghostpuma/issues",
+  "config": {
+    "posts_per_page": 5
+  }
 }
