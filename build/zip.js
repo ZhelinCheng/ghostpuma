@@ -32,7 +32,7 @@ try {
 
   fe.writeJsonSync(resolve('puma/package.json'), {...package})
 
-  console.log('版本号写入成功...')
+  console.log(`版本号写入成功：v${version}`)
 
   // 压缩文件
   const puma = fs.createWriteStream(resolve(`puma.zip`))
