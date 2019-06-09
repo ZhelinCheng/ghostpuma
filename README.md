@@ -4,6 +4,11 @@
 
 Ghost博客系统主题Puma，设计来自wordpress主题[Puma](https://github.com/bigfa/Puma)。
 
+## 下载
+
+到[Releases](https://github.com/ZhelinCheng/ghostpuma/releases)页面下载puma.zip文件，并上传到Ghost后台即可。
+
+
 ## 起步
 
 开发：
@@ -15,9 +20,6 @@ npm run dev
 ```
 npm run build
 ```
-
-## 下载
-将目录的puma.zip文件下载，并上传到Ghost后台即可。
 
 ## 截图
 
