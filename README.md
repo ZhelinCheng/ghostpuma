@@ -1,6 +1,8 @@
-# ghostpuma
+# ghost-puma
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
+Ghost博客系统主题Puma，设计来自wordpress主题[Puma](https://github.com/bigfa/Puma)。
 
 ## 起步
 
@@ -14,16 +16,16 @@ npm run dev
 npm run build
 ```
 
-## 主题说明
+## 下载
+将目录的puma.zip文件下载，并上传到Ghost后台即可。
 
-Ghost主题ghostpuma，设计来自wordpress主题[Puma](https://github.com/bigfa/Puma)。
+## 截图
 
-目前该主题做为自用，主题模板中含有个人网站备案信息等（如若有好的解决方案，请PR），后期随着Ghost升级会移除。
-
-如若现在使用该主题，请自行Fork修改。
+![截图](./screenshot/1.png)
 
 ## 版本说明
 
 ------------------------------
 Ghostpuma Version 2.0.0
 ------------------------------
+
