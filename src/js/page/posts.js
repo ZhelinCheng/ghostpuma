@@ -25,11 +25,20 @@ hljs.registerLanguage('css', css)
 hljs.registerLanguage('less', less)
 
 hljs.initHighlightingOnLoad()
-$(function () {
+
+function ready (fn) {
+  if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
+    fn()
+  } else {
+    document.addEventListener('DOMContentLoaded', fn)
+  }
+}
+
+ready(function () {
   if (window._SITE_CONFIG) {
-    const $comment = $('#gitalk-container')
+    const $comment = document.getElementById('gitalk-container')
     const config = _SITE_CONFIG['comment']
-    config.id = $comment.attr('data-cid')
+    config.id = $comment.getAttribute('data-cid')
     const gitalk = new Gitalk(config)
     gitalk.render('gitalk-container')
   }
