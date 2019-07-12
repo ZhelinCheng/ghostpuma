@@ -1,6 +1,6 @@
 {
   "name": "ghostpuma",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ZhelinCheng/ghostpuma#readme",
   "dependencies": {
+    "gitalk": "^1.5.0",
     "highlight.js": "^9.15.6",
     "jquery": "^3.4.1"
   },

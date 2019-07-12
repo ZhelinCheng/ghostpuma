@@ -13,6 +13,8 @@ import typescript from 'highlight.js/lib/languages/typescript'
 import html from 'highlight.js/lib/languages/haml'
 import css from 'highlight.js/lib/languages/css'
 import less from 'highlight.js/lib/languages/less'
+import '@/css/gitalk.css'
+import Gitalk from 'gitalk'
 
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('shell', shell)
@@ -23,3 +25,12 @@ hljs.registerLanguage('css', css)
 hljs.registerLanguage('less', less)
 
 hljs.initHighlightingOnLoad()
+$(function () {
+  if (window._SITE_CONFIG) {
+    const $comment = $('#gitalk-container')
+    const config = _SITE_CONFIG['comment']
+    config.id = $comment.attr('data-cid')
+    const gitalk = new Gitalk(config)
+    gitalk.render('gitalk-container')
+  }
+})

@@ -1,0 +1,5 @@
+/node_modules/*
+/build/*
+/src/js/vendor/*
+/src/global/*
+/public/*
