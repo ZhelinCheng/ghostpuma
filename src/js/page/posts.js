@@ -35,7 +35,7 @@ function ready (fn) {
 }
 
 ready(function () {
-  if (window._SITE_CONFIG) {
+  if (window._SITE_CONFIG && _SITE_CONFIG['comment']) {
     const $comment = document.getElementById('gitalk-container')
     const config = _SITE_CONFIG['comment']
     config.id = $comment.getAttribute('data-cid')
